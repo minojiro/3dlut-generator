@@ -28,8 +28,7 @@ export default function Home() {
 
   const handleUpload = async (e: ChangeEvent<HTMLInputElement>) => {
     const canvas = canvasRef2.current
-    const context = canvas?.getContext('2d')
-    if (!e.target?.files || !canvas || !context) return
+    if (!e.target?.files || !canvas) return
     await drawFileImageToCanvas(e.target?.files[0], canvas)
     const colorTable = canvasToColorTable(canvas)
     const lut = colorTableToLut(colorTable)

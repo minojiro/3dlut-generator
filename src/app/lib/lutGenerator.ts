@@ -64,7 +64,9 @@ export const drawFileImageToCanvas = (
 ) => {
   const reader = new FileReader();
   const image = new Image();
-  const context = canvas.getContext("2d");
+  const context = canvas.getContext("2d", {
+    willReadFrequently: true,
+  });
   if (!context) throw new Error("Canvas context is not available");
   return new Promise((res, rej) => {
     reader.readAsDataURL(file);
