@@ -45,7 +45,8 @@ export default function Home() {
       <header className="mb-10">
         <p className="font-bold text-xl mb-3">3D LUT ジェネレーター</p>
         <p className="">
-          紹介するテキスト紹介するテキスト紹介するテキスト紹介するテキスト
+          カラーチャートを加工してアップロードするだけ。色彩編集を再現する3D
+          LUTを自動生成。
         </p>
       </header>
       <section className="mb-12">
@@ -60,7 +61,7 @@ export default function Home() {
               className="btn btn-primary mt-2"
             >
               <AiOutlineDownload />
-              ダウンロード
+              ダウンロード (.png)
             </a>
           </div>
         )}
@@ -79,7 +80,7 @@ export default function Home() {
           className="btn btn-primary"
         >
           <AiOutlineUpload />
-          アップロード
+          アップロード (.png, .jpg)
         </button>
         <input
           ref={inputFileUpload}
@@ -102,7 +103,7 @@ export default function Home() {
           href={generatedLutDownloadUrl}
         >
           <AiOutlineDownload />
-          LUTをダウンロード
+          LUTをダウンロード (.cube)
         </a>
       </section>
 
