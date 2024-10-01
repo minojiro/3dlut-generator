@@ -107,8 +107,8 @@ export default function Home() {
       </section>
 
       <div className="hidden">
-        <canvas height={1080} width={1920} ref={canvasRef} />
-        <canvas height={1080} width={1920} ref={canvasRef2} />
+        <canvas height={1278} width={2272} ref={canvasRef} />
+        <canvas height={1278} width={2272} ref={canvasRef2} />
       </div>
     </div>
   )

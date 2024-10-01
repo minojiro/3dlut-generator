@@ -10,6 +10,8 @@ export const drawStraightChart = (canvas: HTMLCanvasElement) => {
   const cellSizeH = canvas.height / lineCellCount;
   const cellSizeW = canvas.width / lineCellCount;
   const colorStep = 255 / (size - 1);
+  ctx.fillStyle = "rgb(50,50,50)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < cellCount; i++) {
     const x = (i % lineCellCount) * cellSizeW;
     const y = ~~(i / lineCellCount) * cellSizeH;
