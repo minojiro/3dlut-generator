@@ -33,7 +33,6 @@ export default function Home() {
     const colorTable = canvasToColorTable(canvas)
     const lut = colorTableToLut(colorTable)
     setGeneratedLut(lut)
-    alert('LUTファイルを生成しました！')
   }
 
   const handleUploadButtonClick = () => {
