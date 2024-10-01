@@ -12,7 +12,6 @@ import {
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const canvasRef2 = useRef<HTMLCanvasElement>(null)
   const inputFileUpload = useRef<HTMLInputElement>(null)
   const [generatedLut, setGeneratedLut] = useState('')
   const [straightChartDataUrl, setStraightChartDataUrl] = useState('')
@@ -27,7 +26,7 @@ export default function Home() {
   })
 
   const handleUpload = async (e: ChangeEvent<HTMLInputElement>) => {
-    const canvas = canvasRef2.current
+    const canvas = canvasRef.current
     if (!e.target?.files || !canvas) return
     await drawFileImageToCanvas(e.target?.files[0], canvas)
     const colorTable = canvasToColorTable(canvas)
@@ -106,10 +105,7 @@ export default function Home() {
         </a>
       </section>
 
-      <div className="hidden">
-        <canvas height={1278} width={2272} ref={canvasRef} />
-        <canvas height={1278} width={2272} ref={canvasRef2} />
-      </div>
+      <canvas className="hidden" height={1278} width={2272} ref={canvasRef} />
     </div>
   )
 }
